@@ -1,0 +1,282 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  color: #222;
+  padding-bottom: 50px;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.nav {
+  position: fixed;
+  background-color: rgb(41, 41, 41, 0.5);
+  top: 0;
+  left: 0;
+  right: 0;
+  transition: all 0.3s ease-in-out;
+}
+
+.nav .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0;
+  transition: all 0.3s ease-in-out;
+}
+
+.nav ul {
+  display: flex;
+  list-style-type: none;
+  align-items: center;
+  justify-content: center;
+}
+
+.nav a {
+  color: #fff;
+  text-decoration: none;
+  padding: 7px 15px;
+  transition: all 0.3s ease-in-out;
+  font-weight: normal;
+  
+}
+
+.nav.active {
+  background-color: #fff;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.nav.active a {
+  color: #000;
+}
+
+.nav.active .container {
+  padding: 18px 0;
+}
+
+.nav a.current,
+.nav a:hover {
+  color: #7ccadd;
+ }
+
+.mainbg {
+  background-image: url('img/bg.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom center;
+  height: 100vh;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  margin-bottom: 20px;
+  z-index: -2;
+}
+
+.mainbg::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(53, 53, 53, 0.1);
+  z-index: -1;
+}
+
+.mainbg h1 {
+  font-size: 35px;
+  margin: -20px 0 20px;
+  background: rgba(75, 119, 212, 0.1);
+  padding: 15px;
+}
+.mainbg h1 a {
+  font-size: 35px;
+  margin: -20px 0 20px;
+  color: black;
+  background: rgba(75, 119, 212, 0.1);
+}
+
+.mainbg p {
+  font-size: 20px;
+  letter-spacing: 1px;
+}
+.mainbg p a {
+  font-weight: bold;
+  color: black;
+  font-size: 20px;
+  letter-spacing: 1px;
+}
+
+main.cards {
+  display: flex;
+  padding: 32px;
+  justify-content:center;
+  
+}
+
+main.cards section.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  background: white;
+  padding: 1rem 1.5rem;
+  border-radius: 8px;
+  max-height: 468px;
+  margin-left: 32px;
+}
+
+main.cards section.card:first-child {
+  margin-left: 0;
+}
+
+main.cards section.card .icon {
+  width: 64px;
+  height: 64px;
+}
+
+main.cards section.card img {
+  width: 100%;
+  border-radius: 5px;
+}
+
+main.cards section.card h3 {
+  font-size: 100%;
+  margin: 16px 0;
+}
+
+main.cards section.card span {
+  font-weight: 300;
+  max-width: 240px;
+  font-size: 80%;
+  margin-bottom: 16px;
+}
+
+main.cards section.card button {
+  padding: 0.5rem 1rem;
+  text-transform: uppercase;
+  cursor: pointer;
+  border-radius: 32px;
+  border: 0;
+  font-size: 80%;
+  font-weight: 500;
+  color: #fff;
+  margin-bottom: 16px 0;
+
+}
+
+main.cards section.card:hover{
+  animation: pulse;
+  animation-duration: 1s;
+}
+
+main.cards section.card.develop button {
+  background: linear-gradient(to right, #3E8AFF, #2d62b1);
+}
+main.cards section.card.prog button {
+  background: linear-gradient(to right, #3E8AFF, #2d62b1);
+}
+main.cards section.card.finance button {
+  background: linear-gradient(to right, #3E8AFF, #2d62b1);
+}
+
+main.cards section.card.contact {
+  box-shadow: 20px 20px 50px -30px #d1ecf3;
+}
+main.cards section.card.prog {
+  box-shadow: 20px 20px 50px -30px #d1ecf3;
+}
+main.cards section.card.about {
+  box-shadow: 20px 20px 50px -30px #d1ecf3;
+}
+
+.centro{
+  margin-top:20px;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  width: 80%;
+
+  
+}
+.centro h3 {
+  font-size: 30px;
+  margin-bottom: 2%;
+}
+.centro p {
+  font-size: 16px;
+  margin-bottom: 2%;
+  line-height: 130%;
+}
+
+.centro label{
+  font-size: 16px;
+  
+}
+.centro form input, textarea {
+  margin-bottom: 10px;
+  font-size: 16px;
+  padding: 5px;
+  border-radius: 5px;
+  border-color: rgb(7, 92, 148);
+  border-width: 1px;
+}
+
+.centro form button {
+  width: 26%;
+  margin-top: 5px;
+  font-size: 16px;
+  padding: 5px;
+  border-radius:5px;
+  border-style:solid;
+  border-width: 1px;
+  cursor: pointer;
+  background-color: rgb(7, 92, 148);
+  color: white;
+
+}
+
+.footer {
+  margin-top: 50px !important;
+  background: rgb(7, 92, 148);
+  height: 10vh;
+  margin: auto;
+  width: 100%;
+  bottom: 0;
+
+  }
+  .footer p{
+    color:white;
+    text-align: center;
+
+  }
+
+@media screen and (max-width: 720px) {
+  main.cards {
+      flex-direction: column;
+  }
+
+  main.cards section.card {
+      margin-left: 0;
+      margin-bottom: 32px;
+  }
+
+  main.cards section.card:last-child {
+      margin-bottom: 0;
+  }
+
+  main.cards section.card button {
+      font-size: 70%;
+  }
+
+}
